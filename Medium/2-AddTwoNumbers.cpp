@@ -28,3 +28,21 @@ public:
         return add.next;
     }
 };
+
+//Recursion
+class Solution {
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        
+        if (!l1 && !l2) return NULL; //check if l1 and l2 are null or not
+        
+        int c = (l1 ? l1->val : 0) + (l2 ? l2->val : 0);
+        ListNode *add = new ListNode(c%10);
+        ListNode *next = l1 ? l1->next:NULL;
+        c /= 10;
+        if(next) next->val += c;
+        else if (c) next = new ListNode(c);
+        add->next = addTwoNumbers(l2 ? l2->next:NULL, next);
+        return add;
+    }
+};

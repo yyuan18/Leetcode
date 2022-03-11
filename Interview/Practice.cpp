@@ -115,6 +115,9 @@ vector<Song> FindSongs(Songs * songs[8M]) {
     shuffle(rap.begin(), rap.end(), default_random_engine(seed));
     shuffle(country.begin(), country.end(), default_random_engine(seed));
     shuffle(jazz.begin(), jazz.end(), default_random_engine(seed));
+    
+    vector<Song> SelectSongs;
+    while (Select)
 }
 
 

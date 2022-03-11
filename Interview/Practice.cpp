@@ -40,7 +40,7 @@ bool predicate(Song* song1, Song* song2) {
 }
 
 // Pick 350 songs recently played, 30% rap, 30% country, 40% jazz
-int PickSongs(Song* songs[8M]) {
+vector<Song> PickSongs(Song* songs[8M]) { //8M stand for 8 million songs in total
 
     sort(songs.begin(), songs.end(), predicate);
 
@@ -78,6 +78,37 @@ int PickSongs(Song* songs[8M]) {
 
 }
 
-// Find songs that didn't play for 2 years
+// Find songs that didn't play for 2 years.
+// Randomly take out 350 songs with 30% rap, 30% country, 40% jazz
+
+vector<Song> FindSongs(Songs * songs[8M]) {
+    //number of songs
+    const int num_rap = 0.3 * 350;
+    const int num_country = 0.3 * 350;
+    const int num_jazz = 0.4 * 350;
+    
+    vector<Song> rap, country, jazz;
+    
+    // Add songs by type and time 
+    for (Song song: songs) {
+        if (song.lastPlayed > 2years) {
+            if (song.type == "rap") {
+                rap.push_back(song);
+            }
+            else if (song.type == "country") {
+                country.push_back();
+            }
+            else if (song.type == "jazz") {
+                jazz.push_back();
+            }
+        }
+    }
+    
+    // Now I have two ways to approach
+    // 1. Shuffle all three vectors with default shuffle and take first n I need
+    // 2. Use unordered_set to check if the number I selected has been used or not
+    //    and random generate numbers to pick.
+    
+}
 
 

@@ -1,5 +1,4 @@
 // 8 million songs, different type, organized with last play date, name, type
-// Pick 350 songs recently played, 30% rap, 30% country, 40% jazz
 
 #include <vector>
 #include <string>
@@ -40,6 +39,7 @@ bool predicate(Song* song1, Song* song2) {
     return song1->last_play_date.year < song2->last_play_date.year;
 }
 
+// Pick 350 songs recently played, 30% rap, 30% country, 40% jazz
 int PickSongs(Song* songs[8M]) {
 
     sort(songs.begin(), songs.end(), predicate);
@@ -77,4 +77,7 @@ int PickSongs(Song* songs[8M]) {
     }
 
 }
+
+// Find songs that didn't play for 2 years
+
 

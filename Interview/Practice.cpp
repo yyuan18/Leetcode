@@ -109,6 +109,12 @@ vector<Song> FindSongs(Songs * songs[8M]) {
     // 2. Use unordered_set to check if the number I selected has been used or not
     //    and random generate numbers to pick.
     
+    // Way 1, shuffle all three, could be expensive
+    unsigned seed = 0; // start from 0 since we need to shuffle all of them
+                       // can add more shuffle with different seed if I want
+    shuffle(rap.begin(), rap.end(), default_random_engine(seed));
+    shuffle(country.begin(), country.end(), default_random_engine(seed));
+    shuffle(jazz.begin(), jazz.end(), default_random_engine(seed));
 }
 
 

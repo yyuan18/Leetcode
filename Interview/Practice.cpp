@@ -117,7 +117,23 @@ vector<Song> FindSongs(Songs * songs[8M]) {
     shuffle(jazz.begin(), jazz.end(), default_random_engine(seed));
     
     vector<Song> SelectSongs;
-    while (Select)
+    while ()
+
+    // Way 2, unordered_set
+    unordered_set<int> rapSet, countrySet, jazzSet;
+    vector<Song> RandomSelectSongs;
+
+    while (rapSet.size() < num_rap || rapSet.size() < rap.size()) { // In case there are less songs fit 
+
+        int random = rand() % num_rap;
+        if (rapSet.count(random) == 0) {
+            rapSet.insert(random);
+            SelectSongs.push_back(rap[random]);
+        }
+
+    }
+
+    // Same with other two
 }
 
 

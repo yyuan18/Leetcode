@@ -35,3 +35,33 @@
     return r;
     
  }
+
+ // Dylan's solution
+bool predicate(vector<int>& v1, vector<int>& v2) {
+    if (v1[0] == v2[0]) {
+        return v1[1] < v2[1];
+    }
+    return v1[0] < v2[0];
+}
+
+class Solution {
+public:
+    int minMeetingRooms(vector<vector<int>>& intervals) {
+        sort(intervals.begin(), intervals.end(), predicate);
+        int res = 0;
+        int i = 0;
+        int size = intervals.size();
+        int prevVal;
+        priority_queue<int, vector<int>, greater<int>> pq;
+        while (i < size) {
+            while (!pq.empty() && intervals[i][0] >= pq.top()) {
+                pq.pop();
+            }
+            pq.push(intervals[i][1]);
+            int currSize = pq.size();
+            res = max(currSize, res);
+            i++;
+        }
+        return res;
+    }
+};

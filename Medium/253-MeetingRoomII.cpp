@@ -1,7 +1,16 @@
-
 /**
- * Given an array of meeting time intervals where intervals[i] = [start, end], return min number of conference rooms required.
- * ex. intervals = [[0,30], [5,10], [15,20]], return: 2
+ * Question: 253. Meeting Room II
+ * 
+ * Author Yifan Yuan
+ * Date 2022-03-11
+ * Description: 
+ * Given an array of meeting time intervals where intervals[i] = [start, end], 
+ * return min number of conference rooms required.
+ * 
+ * Input:  intervals = [[0,30], [5,10], [15,20]]
+ * Output: 2
+ * 
+ * Source: https://leetcode.com/problems/meeting-rooms-ii/
  */
 
  int minMeetingRooms(vector<vector<int>>& intervals) {
@@ -36,7 +45,7 @@
     
  }
 
- // Dylan's solution
+// Dylan's solution using Priority Queue
 bool predicate(vector<int>& v1, vector<int>& v2) {
     if (v1[0] == v2[0]) {
         return v1[1] < v2[1];

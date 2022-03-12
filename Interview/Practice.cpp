@@ -2,7 +2,8 @@
 
 #include <vector>
 #include <string>
-#include <algorithm>    //Sort
+#include <unordered_set>
+#include <algorithm> 
 
 using namespace std;
 
@@ -18,7 +19,7 @@ struct Date {
     unsigned int day, month, year;
 };
 
-//compare dates
+//compare dates, predicate for sort songs
 bool predicate(Song* song1, Song* song2) {
 
     if (song1->last_play_date.year < song2->last_play_date.year) return true;
@@ -117,7 +118,7 @@ vector<Song> FindSongs(Songs * songs[8M]) {
     shuffle(jazz.begin(), jazz.end(), default_random_engine(seed));
     
     vector<Song> SelectSongs;
-    while ()
+    // Think what is a good way to put those songs in?
 
     // Way 2, unordered_set
     unordered_set<int> rapSet, countrySet, jazzSet;

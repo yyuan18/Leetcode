@@ -22,5 +22,23 @@
  *       If we times all numbers with -1, if there are no duplicates, then the
  *       numbers should all be 0, if there are duplicated, we need to use abs()
  *       to make sure that we don't change the dupliated postion back to positive.
- *       After that, the only positive left is missing ones.
+ *       After that, the only positive numbers' (position+1) left is missing ones.
  *********************************************************************************/
+
+vector<int> findDisappearedNumbers(vector<int>& nums) {
+    vector<int> missing;
+    for (const int num : nums) {
+        int pos = abs(num) - 1;
+        if (nums[pos] > 0) {
+            nums[pos] = -nums[pos];
+        }
+    }
+    
+    for (int i = 0; i < nums.size(); ++i) {
+        if (nums[i] > 0) {
+            missing.push_back(i+1);
+        }
+    }
+        
+    return missing;
+}

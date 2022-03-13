@@ -4,11 +4,11 @@
  * Author Yifan Yuan
  * Date 2022-03-12
  * Description: 
- * Given an array nums of n integers where nums[i] is in the range [1, n], 
- * return an array of all the integers in the range [1, n] that do not appear in nums.
+ * A linked list of length n is given such that each node contains an additional random pointer,
+ * which could point to any node in the list, or null.
  * 
- * Input:  nums = [4,3,2,7,8,2,3,1]
- * Output: [5, 6]
+ * Input:  
+ * Output: 
  * 
  * Source: https://leetcode.com/problems/copy-list-with-random-pointer/
  */

@@ -1,11 +1,12 @@
 # Leetcode
-Leetcode questions with solutions in C++ and notes.
+Leetcode questions with solutions in C++ and my study notes. 
 
 ## Folders
 
-- Easy, Medium, Hard -- are leetcode categorized questions
+- Easy, Medium, Hard -- leetcode categorized questions
 - Interview -- contains Interview questions I experienced or practice.
 - LeetCode 101 -- from the great coding book LeetCode 101
+- Note -- things I leant while doing problems
 
 ## Format
 

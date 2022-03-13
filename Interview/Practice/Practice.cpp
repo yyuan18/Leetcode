@@ -1,4 +1,16 @@
-// 8 million songs, different type, organized with last play date, name, type
+/**
+ * Question: Select Songs problem
+ * 
+ * Author Yifan Yuan
+ * Date 2022-03-10
+ * Description: 
+ * 8 million songs, different type, organized with last play date, name, type
+ * 
+ * Input:  8 million songs
+ * Output: by condition
+ * 
+ * Source: None
+ */
 
 #include <vector>
 #include <string>

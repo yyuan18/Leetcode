@@ -64,3 +64,5 @@ v1:
 Reverse full vector
 15 18 21 12 9 6 3 0
 ```
+
+### reference: geeksforgeeks

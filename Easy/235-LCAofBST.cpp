@@ -1,43 +1,32 @@
 /**
- * Question: 236. Lowest Common Ancestor of a Binary Tree
+ * Question: 235. Lowest Common Ancestor of a Binary Search Tree
  * 
  * Author Yifan Yuan
- * Date 2022-03-15
+ * Date 2022-03-17
  * Description: 
- * Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree. 
+ * Given a binary search tree(BST), find the lowest common ancestor (LCA) of two given nodes in the tree. 
  * According to the definition of LCA on Wikipedia: 
  * “The lowest common ancestor is defined between two nodes p and q as the lowest node in T 
  * that has both p and q as descendants (where we allow a node to be a descendant of itself).”
  * 
- * Input:  root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1
- *              3
+ * Input:  root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4
+ *              6
  *            /   \
- *           5     1
+ *           2     8
  *         /  \   /  \
- *        6   2   0   8
+ *        0   4   7   9
  *           / \
- *          7   4
- * Output: 3
+ *          3   5
+ * Output: 2
  * 
  * Constraints:
  *     The number of nodes in the tree is in the range [2, 105].
  *     -109 <= Node.val <= 109
  *     All Node.val are unique.
  *     p != q
- *     p and q will exist in the tree.
+ *     p and q will exist in the BST.
  * 
- * Source: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
- */
-
-// Recursion
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
- * };
+ * Source: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
  */
 
 TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
